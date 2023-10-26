@@ -7,15 +7,28 @@ onReady()
 
 console.log('🟥 🟦 🟩 🟨');
 
+let redCounter = 1;
+let blueCounter = 1;
+let greenCounter = 1;
+let yellowCounter = 1;
+
+
 function onRedButtonClick () {
     console.log('you clicked the red button');
     let redButton = document.getElementById('blocks');
     console.log(redButton);
     redButton.innerHTML += `<div onclick="removeRedBlock(event)" class="block red-fill"></div>`;
+    redCounter++;
+    document.getElementById('red-count').textContent = redCounter;
 }
+
+
 
 function removeRedBlock (event) {
     event.target.remove();
+    redCounter--;
+    document.getElementById('red-count').textContent = redCounter;
+
 }
 
 function onBlueButtonClick () {
@@ -23,10 +36,14 @@ function onBlueButtonClick () {
     let blueButton = document.getElementById('blocks');
     console.log(blueButton);
     blueButton.innerHTML += `<div onclick="removeBlueBlock(event)" class="block blue-fill"></div>`;
+    blueCounter++;
+    document.getElementById('blue-count').textContent = blueCounter;
 }
 
 function removeBlueBlock (event) {
     event.target.remove();
+    blueCounter--;
+    document.getElementById('blue-count').textContent = blueCounter;
 }
 
 function onGreenButtonClick () {
@@ -34,10 +51,14 @@ function onGreenButtonClick () {
     let greenButton = document.getElementById('blocks');
     console.log(greenButton);
     greenButton.innerHTML += `<div onclick="removeGreenBlock(event)" class="block green-fill"></div>`;
+    greenCounter++;
+    document.getElementById('green-count').textContent = greenCounter;
 }
 
 function removeGreenBlock (event) {
     event.target.remove();
+    greenCounter--;
+    document.getElementById('green-count').textContent = greenCounter;
 }
 
 function onYellowButtonClick () {
@@ -45,8 +66,12 @@ function onYellowButtonClick () {
     let yellowButton = document.getElementById('blocks');
     console.log(yellowButton);
     yellowButton.innerHTML += `<div onclick="removeYellowBlock(event)" class="block yellow-fill"></div>`;
+    yellowCounter++;
+    document.getElementById('yellow-count').textContent = yellowCounter;
 }
 
 function removeYellowBlock (event) {
     event.target.remove();
+    yellowCounter--;
+    document.getElementById('yellow-count').textContent = yellowCounter;
 }
