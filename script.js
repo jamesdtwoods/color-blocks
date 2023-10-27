@@ -7,10 +7,10 @@ onReady()
 
 console.log('🟥 🟦 🟩 🟨');
 
-let redCounter = 0;
-let blueCounter = 0;
-let greenCounter = 0;
-let yellowCounter = 0;
+let redCounter = 1;
+let blueCounter = 1;
+let greenCounter = 1;
+let yellowCounter = 1;
 
 
 function onRedButtonClick () {
